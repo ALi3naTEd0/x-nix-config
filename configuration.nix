@@ -193,6 +193,7 @@
     uget
     vscode
     whatsapp-for-linux
+    yt-dlp
 
     # KVM/QEMU
     bridge-utils

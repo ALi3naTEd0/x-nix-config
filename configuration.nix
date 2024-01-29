@@ -30,6 +30,16 @@
 
   #services.blueman.enable = true;
 
+  # Virt-manager
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
+  # Enable Plex server
+  services.plex = {
+    enable = true;
+    openFirewall = true;
+  };
+
   # Enable Hyprland
   #programs.hyprland.enable = true;
 

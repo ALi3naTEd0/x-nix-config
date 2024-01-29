@@ -192,6 +192,7 @@
     thunderbird
     uget
     vscode
+    whatsapp-for-linux
 
     # KVM/QEMU
     bridge-utils

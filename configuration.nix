@@ -175,11 +175,13 @@
     #      meta.knownVulnerabilities = []; # NixOS/nixpkgs#273611
     #    });
     #  })
+    pipx
     plex
     plex-media-player
     python3
-    python3Packages.deemix
-    python3Packages.pypresence
+    python311Packages.deemix
+    python311Packages.pip
+    python311Packages.pypresence
     qbittorrent
     rclone
     rssguard

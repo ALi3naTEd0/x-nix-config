@@ -204,6 +204,10 @@
     qemu_full
     vde2
     virt-manager
+
+    # Hyprland
+    hyprland
+    xdg-desktop-portal-hyprland
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

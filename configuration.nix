@@ -13,20 +13,33 @@
   # Bootloader.
   #boot.loader.systemd-boot.enable = true;
   #boot.loader.efi.canTouchEfiVariables = true;
+
+  # Bootloader dual-boot
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot";
+    };
+    grub = {
+      enable = true;
+      devices = ["nodev"];
+      efiSupport = true;
+    };
+  };
   
   # Bootloader VM.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda";
-  boot.loader.grub.useOSProber = true;
+  #boot.loader.grub.enable = true;
+  #boot.loader.grub.device = "/dev/vda";
+  #boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "x"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable Bluetooth
-  #hardware.bluetooth = {
-  #  enable = true;
-  #  powerOnBoot = true;
-  #};
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
 
   #services.blueman.enable = true;
 
@@ -159,6 +172,7 @@
     jetbrains.idea-community
     keepass
     kid3
+    kitty
     libsForQt5.filelight
     localsend
     #logseq
@@ -208,8 +222,8 @@
     virt-manager
 
     # Hyprland
-    hyprland
-    xdg-desktop-portal-hyprland
+    #hyprland
+    #xdg-desktop-portal-hyprland
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

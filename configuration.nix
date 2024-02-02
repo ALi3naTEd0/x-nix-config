@@ -15,22 +15,22 @@
   #boot.loader.efi.canTouchEfiVariables = true;
 
   # Bootloader dual-boot
-  boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";
-    };
-    grub = {
-      enable = true;
-      devices = ["nodev"];
-      efiSupport = true;
-    };
-  };
+  #boot.loader = {
+  #  efi = {
+  #    canTouchEfiVariables = true;
+  #    efiSysMountPoint = "/boot";
+  #  };
+  #  grub = {
+  #    enable = true;
+  #    devices = ["nodev"];
+  #    efiSupport = true;
+  #  };
+  #};
   
   # Bootloader VM.
-  #boot.loader.grub.enable = true;
-  #boot.loader.grub.device = "/dev/vda";
-  #boot.loader.grub.useOSProber = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/vda";
+  boot.loader.grub.useOSProber = true;
 
   networking.hostName = "x"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -101,6 +101,7 @@
 
   # Enable Deepin Dekstop Environment.
   #services.xserver.desktopManager.deepin.enable = true;
+  #environment.deepin.excludePackages = [ pkgs.deepin.deepin-image-viewer ];
 
   # Enable Budgie Desktop Environment.
   #services.xserver.desktopManager.budgie.enable = true;

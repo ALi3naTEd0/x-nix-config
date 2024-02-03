@@ -155,7 +155,6 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
-    anytype
     discord
     element-desktop
     enpass
@@ -168,7 +167,6 @@
     hypnotix
     jetbrains.idea-community
     kate
-    keepass
     kid3
     kitty
     libsForQt5.filelight
@@ -180,6 +178,7 @@
     mkvtoolnix
     nicotine-plus
     ntfs3g
+    #obsidian
     #(assert (lib.assertMsg (obsidian.version == "1.4.16") "obsidian: has wayland crash been fixed?");
     #  obsidian.override {
     #    electron = electron_24.overrideAttrs (_: {

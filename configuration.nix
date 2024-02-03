@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, libs, pkgs, ... }:
 
 {
   imports =
@@ -143,11 +143,7 @@
     isNormalUser = true;
     description = "x";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      firefox
-      kate
-    #  thunderbird
-    ];
+    packages = with pkgs; [   ];
   };
 
   # Allow unfree packages
@@ -171,6 +167,7 @@
     htop
     hypnotix
     jetbrains.idea-community
+    kate
     keepass
     kid3
     kitty
@@ -202,6 +199,7 @@
     rssguard
     rsync
     soulseekqt
+    sox
     subtitleedit
     syncthing
     tauon
